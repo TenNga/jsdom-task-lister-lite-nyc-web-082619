@@ -4,9 +4,12 @@ let input = document.querySelector('#new-task-description');
 
 let deleteButton = document.querySelector('#delete');
 
+
+
 addList = (event) => {
+  let priority = document.querySelector('#prio').value
   event.preventDefault();
-  list.insertAdjacentHTML('beforeend',`<li> ${input.value}</li>`)
+  list.insertAdjacentHTML('beforeend',`<li style="background-color: ${priority}"> ${input.value}</li><button>x</button>`)
 }
 
 deleteList = () => {
